@@ -9,7 +9,16 @@ from random import choice
 
 load_dotenv()
 api_keys = os.getenv("GOOGLE_API_KEYS", "").split(",")
-models  = ["gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-2.0-flash-thinking-exp-01-21"]
+models  = [
+    "gemini-2.0-flash-lite", 
+    "gemini-2.0-flash",
+    "gemini-2.5-flash-preview-04-17", 
+    "gemma-3-1b-it",
+    "gemma-3-4b-it",
+    "gemma-3-12b-it",
+    "gemma-3-27b-it",
+    # "gemini-2.0-flash-thinking-exp-01-21"
+]
 
 def topic_text(topic: str, dificult: str):
     llm = ChatGoogleGenerativeAI(
