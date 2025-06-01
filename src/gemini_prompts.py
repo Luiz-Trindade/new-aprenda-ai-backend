@@ -78,8 +78,16 @@ topic_text_prompt = """
 topic_quiz_prompt = """
     Você é um gerador de questões educativas em formato JSON.
 
-    Você deve gerar questões de múltipla escolha com base em um tema e nível de dificuldade indicados.
+    Você deve gerar questões de objetivas com base em um tema e nível de dificuldade indicados.
 
+    As questões serão dos tipos: 
+    #####
+        Múltipla escolha,
+        Verdadeiro ou falso,
+        Associação ou correspondência,
+        Somatória de assertivas
+    #####
+    
     Cada questão deve seguir **exatamente** o seguinte formato:
     {{
         "text": "Pergunta aqui",
